@@ -1,0 +1,60 @@
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android) // Add this if you're using Kotlin
+}
+
+android {
+    compileSdkVersion libs.versions.compileSdk.get().toInteger() // Use version from libs.versions.toml
+
+    defaultConfig {
+        applicationId "com.example.yourapp"
+        minSdkVersion libs.versions.minSdk.get().toInteger() // Use version from libs.versions.toml
+        targetSdkVersion libs.versions.targetSdk.get().toInteger() // Use version from libs.versions.toml
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    // Add Kotlin options if you're using Kotlin
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+
+    // Enable view binding or data binding if needed
+    viewBinding {
+        enabled = true
+    }
+    // OR
+    // dataBinding {
+    //     enabled = true
+    // }
+}
+
+dependencies {
+    // AndroidX dependencies
+    implementation libs.androidx.appcompat
+    implementation libs.androidx.material
+    implementation libs.androidx.activity
+    implementation libs.androidx.constraintlayout
+
+    // Testing dependencies
+    testImplementation libs.junit
+    androidTestImplementation libs.androidx.junit
+    androidTestImplementation libs.androidx.espresso.core
+
+    // Add other dependencies as needed
+    // Example: Retrofit, Glide, Room, etc.
+}
