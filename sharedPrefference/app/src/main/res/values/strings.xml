@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">sharedPrefference</string>
+    <string name="decrease">decrease</string>
+    <string name="increase">increase</string>
+    <string name="reset1">reset1</string>
+    <string name="save">save</string>
+    <string name="retrieve">retrieve</string>
+    <string name="__0">__0</string>
+    <string name="saved_value_0">saved_value_0</string>
+</resources>

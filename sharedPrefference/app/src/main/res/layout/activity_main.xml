@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ImageButton
+        android:id="@+id/inc"
+        android:layout_width="164dp"
+        android:layout_height="63dp"
+        android:contentDescription="@string/increase"
+        android:padding="8dp"
+        android:src="@drawable/arrow_up" />
+
+    <ImageButton
+        android:id="@+id/dec"
+        android:layout_width="159dp"
+        android:layout_height="63dp"
+        android:contentDescription="@string/decrease"
+        android:padding="8dp"
+        android:src="@drawable/arrow_down" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reset1"
+        android:padding="8dp" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        android:padding="8dp" />
+
+    <Button
+        android:id="@+id/retrieve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/retrieve"
+        android:padding="8dp" />
+
+    <TextView
+        android:id="@+id/ans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/__0"
+        android:textSize="24sp"
+        android:padding="16dp" />
+
+    <TextView
+        android:id="@+id/saved_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/saved_value_0"
+        android:textSize="20sp"
+        android:padding="16dp" />
+
+</LinearLayout>
